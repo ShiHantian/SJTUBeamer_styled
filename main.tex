@@ -36,6 +36,7 @@
 \usepackage{datetime2}
 \usepackage{fontawesome5}
 \usepackage{hyperref}
+\usepackage{float}
 
 % 参考文献设置，使用 style=gb7714-2015 样式为标准顺序编码制，
 % 使用 style=gb7714-2015ay 样式可以改为著者-出版年制。
@@ -119,16 +120,15 @@
   breaklines,%
 }
 
-\author{Shi Hantian}
-\institute[SJTUG]{上海交通大学 Linux 用户组}
+\author{答辩人：时涵天 \newline\newline 导师：秦通\newline\newline}
+\institute[Pu Yuan Future Scholar Plan]{溥渊未来学者计划}
 \date{\the\year 年 \the\month 月}
-\subject{上海交通大学图书馆专题培训讲座}
-\keywords{LaTeX, 论文排版, SJTUThesis}
+\subject{溥渊未来学者计划立项答辩}
+\keywords{无人机，无线充电，能源}
+\title[UM-SJTU JI \quad\quad Shi Hantian] % 页脚显示标题
+{\textbf{无人机无线充电的硬件设计和自主导航}} % 首页标题
 
-\title[\SJTUBeamer 示例文档] % 页脚显示标题
-{\textbf{如何使用 \LaTeX{} 排版论文}} % 首页标题
-
-\subtitle{\SJTUBeamer 示例文档}
+\subtitle{立项答辩}
 
 \begin{document}
 
@@ -154,45 +154,32 @@
 
 \maketitle
 
-\begin{frame}
-  \frametitle{来源}
-  \begin{thebibliography}{00}
-    \setbeamertemplate{bibliography item}[online]
-    \bibitem{} Alexara Wu.
-    \newblock 如何使用 \LaTeX{} 排版论文[EB/OL].
-    \newblock 2021.
-    \url{https://github.com/sjtug/sjtulib-latex-talk/tree/alexara-2021}
-  \end{thebibliography}
-
-  \vspace*{2ex}
-
-  \begin{itemize}
-    \item 本示例文档的源码结构适用于简短的单次报告，仅展示 \beamer{} 文档类的通
-          用功能，更多地在使用 \SJTUBeamer{} 的样式信息。
-    \item 为发挥 \SJTUBeamer{} 的全部功能，参见发布区
-          \link{https://github.com/sjtug/SJTUBeamer/releases} 的快速入门、用户手
-          册与开发文档。
-    \item 就制作一组讲座而言，相关源码结构可以参考新讲座
-          \link{https://github.com/sjtug/sjtulib-latex-talk/tree/logcreative-2022}。
-          新讲座使用了社区版主题的同时也展示了 \SJTUBeamer{} 的特殊用法。
-  \end{itemize}
-
-\end{frame}
-
 \begin{frame}{目录}
   \tableofcontents[hideallsubsections]	% 隐藏所有小节信息
 \end{frame}
 
-\include{contents/introduction}
-\include{contents/basis}
-\include{contents/thesis}
-\include{contents/summary}
+\include{contents/background_significance}
+\include{contents/key_technologies}
+\include{contents/research_methods}
+\include{contents/expected_results}
 
 \begin{frame}
   \frametitle{参考文献}
-  \printbibliography[heading=none]
-\end{frame}
-
+  \fontsize{8}{10}\selectfont
+  \begin{itemize}
+      \item T. Qin, P. Li and S. Shen, "VINS-Mono: A Robust and Versatile Monocular Visual-Inertial State Estimator," \textit{IEEE Transactions on Robotics}, vol. 34, no. 4, pp. 1004-1020, Aug. 2018. doi: 10.1109/TRO.2018.2853729.
+      
+      \item Y. Lin, F. Gao, T. Qin, et al., "Autonomous aerial navigation using monocular visual-inertial fusion," \textit{Journal of Field Robotics}, vol. 35, pp. 23–51, 2018. doi: 10.1002/rob.21732.
+      
+      \item T. Qin and S. Shen, "Online Temporal Calibration for Monocular Visual-Inertial Systems," \textit{2018 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)}, Madrid, Spain, 2018, pp. 3662-3669. doi: 10.1109/IROS.2018.8593603.
+      
+      \item S. Obayashi, Y. Kanekiyo and T. Shijo, "UAV/Drone Fast Wireless Charging FRP Frustum Port for 85-kHz 50-V 10-A Inductive Power Transfer," \textit{2020 IEEE Wireless Power Transfer Conference (WPTC)}, Seoul, Korea (South), 2020, pp. 219-222. doi: 10.1109/WPTC48563.2020.9295562.
+      
+      \item M. C. Danciu, N. Yingta, I. Ur Rehman and S. Aleshaiker, "UAV Automated Charging Station and Charging Network in Smart Cities for Telemedicine Delivery," \textit{2023 IEEE International Smart Cities Conference (ISC2)}, Bucharest, Romania, 2023, pp. 1-6. doi: 10.1109/ISC257844.2023.10293330.
+  \end{itemize}
+  \end{frame}
+  
+  
 \makebottom
 
 \end{document}
