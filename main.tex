@@ -89,7 +89,7 @@
 \def\cmdxmp#1#2#3{\small{\texttt{\color{structure}$\backslash$#1}\{#2\}
 \hspace{1em}\\ $\Rightarrow$\hspace{1em} {#3}\par\vskip1em}}
 
-\usetheme[maxplus]{sjtubeamer}
+\usetheme[min,blue,light,miniframes]{sjtubeamer}
 % 使用 maxplus/max/min 切换标题页样式
 % 使用 red/blue 切换主色调
 % 使用 light/dark 切换亮/暗色模式
@@ -106,6 +106,8 @@
 % \tikzexternalize[prefix=build/]
 % 如果您需要缓存 tikz 图像，请取消注释上一行，并在编译选项中添加 -shell-escape。
 
+% \setbeamertemplate{sections/subsections in toc}[circle] % 使用普通的圆形目录结构
+
 \lstset{
   language=[LaTeX]TeX,           % 更改高亮语言
   texcsstyle=*\color{cprimary},  % 只在高亮 LaTeX 语言时必须
@@ -117,7 +119,7 @@
   breaklines,%
 }
 
-\author{Alexara Wu}
+\author{Shi Hantian}
 \institute[SJTUG]{上海交通大学 Linux 用户组}
 \date{\the\year 年 \the\month 月}
 \subject{上海交通大学图书馆专题培训讲座}

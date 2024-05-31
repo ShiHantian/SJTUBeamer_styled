@@ -28,6 +28,10 @@
 \ExecuteOptionsBeamer{red}
 \DefineOption{color}{lum}{light}
 \DefineOption{color}{lum}{dark}
+
+\definecolor{giftBlue}{RGB}{0, 43, 96}     % 溥渊蓝
+\definecolor{giftRed}{RGB}{200, 22, 30}  % 溥渊红
+
 \ExecuteOptionsBeamer{dark}
 \ProcessOptionsBeamer
 \if\EqualOption{color}{color}{red}
@@ -60,12 +64,14 @@
 \setbeamercolor{author}{use={palette primary},bg=,fg=palette primary.fg}
 \setbeamercolor{institute}{parent=author}
 \setbeamercolor{date}{parent=author}
-\setbeamercolor{logo}{bg=,fg=cprimary}
-\setbeamercolor{block title}{fg=white,bg=cprimary!90}
+\setbeamercolor{logo}{bg=,fg=}
+
+\setbeamercolor{block title}{fg=white, bg=giftRed}
 \setbeamercolor{block title alerted}{use=alerted text,
   fg=white,bg=csecondary}
 \setbeamercolor{block title example}{use=example text,
   fg=cquanternary,bg=ctertiary}
+
 \setbeamercolor{block body}{parent=normal text,use=block title,
   bg=block title.bg!15}
 \setbeamercolor{block body alerted}{parent=normal text,
@@ -73,6 +79,7 @@
 \setbeamercolor{block body example}{parent=normal text,
   use=block title example,bg=block title example.bg!15}
 \setbeamercolor{block body stamp}{bg=}
+
 \setbeamercolor{footnote}{fg=cprimary,bg=}
 \setbeamercolor{part title}{parent={palette primary}}
 \setbeamercolor{section title}{parent={palette secondary}}
